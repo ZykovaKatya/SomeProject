@@ -1,0 +1,23 @@
+splintExample.c: (in function main)
+splintExample.c:5:12: Variable c used before definition
+  An rvalue is used that may not be initialized to a value on some execution
+  path. (Use -usedef to inhibit warning)
+splintExample.c:5:12: Suspected infinite loop.  No value used in loop test (c)
+                         is modified by test or loop body.
+  This appears to be an infinite loop. Nothing in the body of the loop or the
+  loop test modifies the value of the loop test. Perhaps the specification of a
+  function called in the loop body is missing a modification. (Use -infloops to
+  inhibit warning)
+splintExample.c:7:9: Assignment of int to char: c = getchar()
+  To make char and int types equivalent, use +charint.
+splintExample.c:8:13: Test expression for if is assignment expression: c = 'x'
+  The condition test is an assignment expression. Probably, you mean to use ==
+  instead of =. If an assignment is intended, add an extra parentheses nesting
+  (e.g., if ((a = b)) ...) to suppress this message. (Use -predassign to
+  inhibit warning)
+splintExample.c:8:13: Test expression for if not boolean, type char: c = 'x'
+  Test expression type is not boolean. (Use -predboolothers to inhibit warning)
+splintExample.c:14:17: Fall through case (no preceding break)
+  Execution falls through from the previous case (use /*@fallthrough@*/ to mark
+  fallthrough cases). (Use -casebreak to inhibit warning)
+

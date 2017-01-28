@@ -1,0 +1,3 @@
+indent -st -bap -bli0 -i4 -ncs -npcs -npsl -fca -lc79 -fc1 -ts4 hello.c
+
+http://linux.die.net/man/1/indent
